@@ -1,0 +1,111 @@
+:root {
+  --blue: #756ab6;
+  --lightBlue: #ac87c5;
+  --pinkLight: #f875aa;
+  --input: #aedefc;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+header {
+  position: absolute;
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-size: 35px;
+  background-color: var(--pinkLight);
+  color: var(--blue);
+  font-weight: bold;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--blue);
+}
+
+#weatherForm{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+
+#input input {
+  border: 2px solid rgb(15, 206, 244);
+  padding: 15px;
+  border-radius: 20px;
+  font-size: 25px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  background-color: var(--pinkLight);
+  color: #aedefc;
+  font-weight: bold;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#input button {
+  background-color: var(--pinkLight);
+  color: var(--blue);
+  border: none;
+  padding: 15px;
+  border-radius: 20px;
+  font-size: 20px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  cursor: pointer;
+  border: 3px solid var(--input);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#input button:hover {
+  background-color: var(--lightBlue);
+}
+
+#result {
+  height: auto;
+  margin: 30px 0px;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  letter-spacing: 1px;
+  font-size: 25px;
+  font-weight: bold;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: #FFCC70;
+  border-radius: 30px;
+  overflow: hidden;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.516);
+  backdrop-filter: blur(50px);
+  animation: borderChange 1s infinite;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes borderChange {
+  0% {
+      border: 5px solid #FF70A6;
+  }
+  25% {
+      border: 5px solid #70FFD8;
+  }
+  50% {
+      border: 5px solid #FFD870;
+  }
+  75% {
+      border: 5px solid #AC70FF;
+  }
+  100% {
+      border: 5px solid #70A6FF;
+  }
+}
+  
